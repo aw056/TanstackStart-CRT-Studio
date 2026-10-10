@@ -49,7 +49,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 			</head>
 			<body className="font-sans antialiased">
 				<Navbar />
-				<main className="p-4">{children}</main>
+				<main>{children}</main>
 				<TanStackDevtools
 					config={{
 						position: "bottom-right",
