@@ -95,8 +95,8 @@ function App() {
 				</div>
 			</section>
 
-			<section className="px-6">
-				<div className=" flex justify-between items-center pb-4">
+			<section className="px-6 pb-8">
+				<div className=" flex justify-between items-center pb-6">
 					<h2 className="font-heading text-4xl">The Rooms</h2>
 					<span>04 Available</span>
 				</div>
@@ -130,6 +130,46 @@ function App() {
 							</CardFooter>
 						</Card>
 					))}
+				</div>
+			</section>
+
+			<section className="px-6">
+				<div className="grid gap-12">
+					<h2 className="font-heading text-4xl">
+						Three steps. <br /> No emails.
+					</h2>
+					<div className="divide-y border-y">
+						{[
+							[
+								"01",
+								"Pick a room",
+								"Browse galleries, gear lists and specs. Every studio shows exactly what's in the box.",
+							],
+							[
+								"02",
+								"Choose your hours",
+								"Open the calendar, tap the free slots. Booked hours are hatched out in real time.",
+							],
+							[
+								"03",
+								"Pay & walk in",
+								"Secure checkout, instant confirmation, door code the morning of your session.",
+							],
+						].map(([n, t, d]) => (
+							<div
+								key={n}
+								className="grid gap-2 py-8 sm:grid-cols-[80px_1fr] sm:gap-6"
+							>
+								<span className="font-heading text-4xl text-primary">{n}</span>
+								<div>
+									<h3 className="font-heading text-3xl font-normal">{t}</h3>
+									<p className="mt-2 max-w-md text-sm text-muted-foreground">
+										{d}
+									</p>
+								</div>
+							</div>
+						))}
+					</div>
 				</div>
 			</section>
 		</main>
